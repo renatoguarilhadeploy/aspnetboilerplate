@@ -90,8 +90,8 @@ var abp = abp || {};
                     if (transport !== signalR.HttpTransportType.LongPolling) {
                         return start(transport + 1);
                     }
-
-                    return Promise.reject(error);
+                    else 
+                        return Promise.reject(error);
                 });
         }(signalR.HttpTransportType.WebSockets);
     }
